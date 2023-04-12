@@ -16,9 +16,7 @@ public class TestRestController {
     @Autowired
     public TestRestController(TestService theService) {        service = theService;    }
 
-
     @PostMapping("/test")
-    @CrossOrigin
     public String test(@RequestBody SearchTest object) {
         return service.test(object);
     }
